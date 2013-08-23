@@ -1,0 +1,21 @@
+This is one of my previous homework assignments. 
+
+Some of my assignments are 100% done from scratch, while others are based off of a skeleton I was provided. 
+They might be useful for some of you out there, but their real intent is to document my progress... and hopefully look back and feel proud at some point?
+
+Later assignments are 100% from scratch. This program comes with three files. Some of the files in other HW-assignment-based repos may not include all of the files as they were included but not done by me. I worked on this with a partner on the previous MapApp, but worked on this one alone. We did most of the programming you see there, though there was a basic skeleton. We definitely set up the accessors and manipulators in the viewer, we also set up the for loop to paint the graphics we had drawn. Overall, most of it was done by us. We worked as pair programmers, so there aren't explicit parts where one person worked on one file or one section of that file.
+
+This is a great resource if someone were to ever decide to implement a map application of some sort. This MapApp combines the last MapApp features into one. This MapApp features buttons for offset in all four directions and magnification in and out. This uses action listeners.
+-----------------------------------------------------
+
+One of the major issues I faced with this assignment was figuring out how to get my buttons to work. I thought my logic was right (and it was) yet my buttons were not doing what they were supposed to do. I later realized when I clicked outside of my map window the map would reposition itself. This was because the image was not being repainted directly after the button was being pressed.
+
+Another issue I faced was a null pointer exception when I first started creating the buttons. I learned that null pointers are exactly what they sound like: whatever you are using is null which is causing your error. In my case view was null, view was not initialized even though I placed it in mapGUI. I had to instantiate it at the top of mapGUI rather than where I had it previously which was setupWindows.
+
+I learned that you can put a pane into a panel and a panel into a panel which is the trick to centering the zoom in and out buttons.
+
+I struggled with trying to get the image to magnify in the center when zoom in is clicked. When I finally came up with an equation it didn't work because magnification and offset are integers therefore the variable I initialized remained at 0. I went to office hours and learned my equation was missing an extra piece. The change in the proportion between half of the current width and magnification should have been included.
+
+During office hours, I found out the loop in paint component was reversed which contributed to a minor error when trying to offset.
+
+Once that issue was solved, I was able to easily figure out how to do the zoom out feature.
